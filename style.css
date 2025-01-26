@@ -41,7 +41,7 @@ html {
     width: 100vw;
     height: 100vh;
     background-color: var(--loginBackground);
-    background-image: url("./assets/images/materials/dark-mosaic.png");
+    background-image: url("assets/images/materials/dark-mosaic.png");
 }
 
 .login_title {
