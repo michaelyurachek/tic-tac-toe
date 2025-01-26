@@ -1,0 +1,170 @@
+/* NOTES
+font-family: "Playwrite AU NSW", serif;
+*/
+
+/* || FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+NSW:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+NSW:wght@100..400&display=swap');
+
+/* || WEBSITE SETTINGS */ 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Kanit", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    font-optical-sizing: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* || WEBSITE COLORS */
+:root {
+    --backgroundColor: rgb(0, 0, 0);
+    --loginTitle: rgb(255, 0, 255);
+    --loginTitleShadow: rgb(193, 25, 193);
+    --loginBackground: rgb(0, 0, 0);
+    --loginBlock: rgb(18, 18, 18);
+    --blockBorder: rgb(59, 59, 59);
+}
+
+/* || BACKGROUND PAGE */
+#backgroundPage {
+    background-color: var(--backgroundColor);
+}
+
+/* || LOGIN SECTION */
+#loginSection {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--loginBackground);
+    background-image: url("./assets/images/materials/dark-mosaic.png");
+}
+
+.login_title {
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_sideTitle {
+    color: white;
+    font-family: "Playwrite AU NSW", serif;
+    text-shadow: 0 0 10px var(--loginTitleShadow);
+    font-size: .7em;
+    text-align: center;
+    padding: 3vh 0;
+}
+
+.login_title h1 {
+    color: var(--loginTitle);
+    font-family: "Playwrite AU NSW", serif;
+    text-shadow: 0 0 10px var(--loginTitleShadow);
+    font-size: 3em;
+    text-align: center;
+    padding: 3vh 0;
+}
+
+.login_inputs {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login_block {
+    width: 90vw;
+    height: 40vh;
+    background-color: var(--loginBlock);
+    border: 1px solid var(--blockBorder);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.login_inputHolders {
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.login_inputHolders p {
+    font-size: 1.8em;
+    color: var(--loginTitle);
+    text-shadow: .1em .1em 10px rgb(179, 6, 176);
+}
+
+.login_inputHolders input {
+    width: 92%;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: black;
+    color:white;
+    border: none;
+    border-left: 3px solid var(--blockBorder);
+    border-right: 3px solid var(--blockBorder);
+    cursor: pointer;
+    padding: .1vh 0;
+}
+
+.login_inputHolders input:hover {
+    background-color: rgb(24, 24, 24);
+}
+
+.login_inputHolders input:active {
+    border: 1px solid var(--blockBorder);
+}
+
+.login_footer {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_footer footer {
+    width: 90%;
+    height: 10vh;
+    background-color: var(--loginBlock);
+    border: 1px solid var(--blockBorder);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.login_footer footer p {
+    color: white;
+    font-size: 1.5em;
+    font-family: "Playwrite AU NSW", serif;
+    text-shadow: 0 0 20px var(--loginTitle);
+}
+
+/* || LOADING SECTION */
+#loadingSection {
+    width: 100vw;
+    height: 100vh;
+    background-color: lime;
+}
+
+/* || SHOW SECTION */
+#showSection {
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+}
