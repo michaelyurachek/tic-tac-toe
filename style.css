@@ -81,7 +81,7 @@ html {
 
 .login_block {
     width: 90vw;
-    height: 40vh;
+    height: 55vh;
     background-color: var(--loginBlock);
     border: 1px solid var(--blockBorder);
     border-radius: 5px;
@@ -129,6 +129,24 @@ html {
     border: 1px solid var(--blockBorder);
 }
 
+.login_submitHolder {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_submitHolder button {
+    width: 70vw;
+    height: auto;
+    padding: 2vh 0;
+    color: white;
+    font-size: 1.3em;
+    border: 1px solid var(--loginTitle);
+    background-color: black;
+}
+
 .login_footer {
     width: 100vw;
     height: 20vh;
@@ -160,6 +178,7 @@ html {
     width: 100vw;
     height: 100vh;
     background-color: lime;
+    display: none;
 }
 
 /* || SHOW SECTION */
@@ -167,4 +186,5 @@ html {
     width: 100vw;
     height: 100vh;
     background-color: red;
+    display: none;
 }
