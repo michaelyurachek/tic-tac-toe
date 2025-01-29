@@ -9,3 +9,8 @@ function loginCheck() {
         document.getElementById("showSection").style.display = "flex";
     }
 }
+
+function yes() {
+    document.getElementById("showSection").style.display = "none";
+    document.getElementById("YIPPI").style.display = "flex";
+}

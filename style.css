@@ -28,12 +28,19 @@ html {
     --loginTitleShadow: rgb(193, 25, 193);
     --loginBackground: rgb(0, 0, 0);
     --loginBlock: rgb(18, 18, 18);
-    --blockBorder: rgb(59, 59, 59);
+    --blockBorder: hsl(0, 0%, 23%);
+    --slide1Bck: rgb(21, 21, 21);
+    --slide3Bck: black;
+    --fancyFont: "Playwrite AU NSW", serif;
 }
 
 /* || BACKGROUND PAGE */
 #backgroundPage {
     background-color: var(--backgroundColor);
+    background-image: url("./assets/images/backgrounds/heartRenderNonBlur.png");
+    background-size: 120vh;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 /* || LOGIN SECTION */
@@ -42,6 +49,7 @@ html {
     height: 100vh;
     background-color: var(--loginBackground);
     background-image: url("assets/images/materials/dark-mosaic.png");
+    display: block;
 }
 
 .login_title {
@@ -54,7 +62,7 @@ html {
 
 .login_sideTitle {
     color: white;
-    font-family: "Playwrite AU NSW", serif;
+    font-family: var(--fancyFont);
     text-shadow: 0 0 10px var(--loginTitleShadow);
     font-size: .7em;
     text-align: center;
@@ -63,7 +71,7 @@ html {
 
 .login_title h1 {
     color: var(--loginTitle);
-    font-family: "Playwrite AU NSW", serif;
+    font-family: var(--fancyFont);
     text-shadow: 0 0 10px var(--loginTitleShadow);
     font-size: 3em;
     text-align: center;
@@ -169,22 +177,224 @@ html {
 .login_footer footer p {
     color: white;
     font-size: 1.5em;
-    font-family: "Playwrite AU NSW", serif;
+    font-family: var(--fancyFont);
     text-shadow: 0 0 20px var(--loginTitle);
-}
-
-/* || LOADING SECTION */
-#loadingSection {
-    width: 100vw;
-    height: 100vh;
-    background-color: lime;
-    display: none;
 }
 
 /* || SHOW SECTION */
 #showSection {
     width: 100vw;
-    height: 100vh;
-    background-color: red;
+    height: auto;
     display: none;
+    flex-direction: column;
+}
+
+.firstSlide {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, white, rgb(255, 141, 215), black, rgb(101, 34, 76));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.firstSlide h1 {
+    color: white;
+    font-size: 2.9em;
+    font-family: var(--fancyFont);
+    -webkit-text-stroke: .5px var(--loginTitle);
+    text-shadow: 0 0 10px var(--loginTitleShadow);
+    padding-bottom: 5vh;
+    width: 100%;
+    text-align: center;
+}
+
+.description_holder {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 20px var(--loginTitleShadow);
+    z-index: 2;
+}
+
+.description_holder h2 {
+    color: var(--loginTitle);
+    width: 95%;
+    font-size: 1.5em;
+    font-family: var(--fancyFont);
+    padding: 2vh 0;
+}
+
+.description_holder p {
+    color: var(--loginTitle);
+    padding-bottom: 3vh;
+    width: 95%;
+}
+
+.secondSlide {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.secondSlide h1 {
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.642);
+    padding: 3vh 0;
+    font-size: 2.5em;
+    font-family: var(--fancyFont);
+    text-align: center;
+    -webkit-text-stroke: .5px var(--loginTitle);
+    text-shadow: 0 0 10px var(--loginTitleShadow);
+}
+
+.call_holder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vh 0;
+    gap: 5vh;
+}
+
+.callBanner {
+    width: 95%;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.525);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.callBanner h2 {
+    color: white;
+    font-size: 1.2em;
+    text-shadow: .1em .1em 0 var(--loginTitle);
+}
+
+.callBanner img {
+    height: 80%;
+    width: auto;
+}
+
+.thirdSlide {
+    width: 100vw;
+    height: 160vh;
+    background-color: var(--slide3Bck);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.thirdSlide h1 {
+    width: 100%;
+    height: auto;
+    padding: 1vh 0;
+    font-size: 2.5em;
+    color: white;
+    font-family: var(--fancyFont);
+    text-align: center;
+    -webkit-text-stroke: .5px var(--loginTitle);
+    text-shadow: 0 0 10px var(--loginTitleShadow);
+}
+
+.thirdSlide img {
+    width: 70%;
+    height: 40vh;
+    object-fit: cover;
+    box-shadow: 0 0 10px var(--loginTitle);
+    border-radius: 20px;
+}
+
+.theQuestion {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.73);
+}
+
+.theQuestion h1 {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20vh;
+    color: white;
+    font-size: 2.5em;
+    font-family: var(--fancyFont);
+    text-align: center;
+    -webkit-text-stroke: .5px var(--loginTitle);
+    text-shadow: 0 0 10px var(--loginTitleShadow);
+}
+
+.theQuestion h3 {
+    width: 100%;
+    height: auto;
+    padding: 3vh 0;
+    color: white;
+    font-size: 2em;
+    font-family: var(--fancyFont);
+    text-align: center;
+    -webkit-text-stroke: .5px var(--loginTitle);
+    text-shadow: 0 0 10px var(--loginTitleShadow);
+}
+
+.answerHolder {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 5vw;
+}
+
+.answerHolder a {
+    width: 30%;
+    background-color: pink;
+    text-align: center;
+    border-radius: 10px;
+    padding: 2vw;
+    font-size: 2em;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.answerHolder a:hover {
+    font-size: 2.2em;
+}
+
+#NOANSWER:active {
+    background-color: red;
+}
+
+
+/* || YIPPI */
+#YIPPI {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#YIPPI img {
+    width: 100%;
+    height: auto;
 }
